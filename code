@@ -1,0 +1,121 @@
+#Jonathan Rizkallah
+#10/19/23
+
+  
+# Problem 1:
+
+  
+import random
+
+ Use a for statement and random.randrange to print 10 random integers between 25 and 35.
+
+# Below I created a for loop with the loop variable rand. I then set the range of iterations to 10
+# I then created a variable named random_int with a value that gets a random number within the range of 25 and 35
+# Lastly I added a print function for the random_int variable. This prints a random integer within the range of 25 and 35 ten times.
+
+for rand in range(10):
+    random_int = random.randrange(25, 36) # Inclusive
+    print(random_int)
+
+
+# Problem 2:
+import random
+
+ Use random.randrange to print an odd integer between 0 and 100.
+# In the code below I created a variable named random_odd that genearates a random odd number using random.randrage
+# Lastly I added the random_odd variable to a print function to print a single psuedo random odd number 
+
+random_odd = random.randrange(1, 101, 2)  # Generates a random odd number between 1 and 100
+print(random_odd)
+
+# If we wanted to print more then one random odd number we can use a for loop like the code i wrotw below.
+
+for odd in range(10): # will print the code below 10 times, printing 10 random odd numbers
+    random_odd2 = random.randrange(1, 101, 2)
+    print(f"{random_odd2} random odd number from for loop")
+
+
+# Problem 3: 
+import random
+
+Use random.choice to select a day of the week from a list and print that day.
+days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] # Create a list with all days inside
+
+random_day = random.choice(days) # Here I created a varaible with the value of random.choice(days). This will generate a random day from the days list above.
+print(random_day) # This will print the random_day variable with the value of the random day that as generated.
+
+
+
+#Problem 4:
+
+
+
+import math
+
+
+#Search on the internet for a way to calculate an approximation for pi.
+#There are many that use simple arithmetic. Write a program to compute the approximation and
+#then print that value as well as the value of math.pi from the math module.
+
+
+# below I created a loop to run the Leibniz formula over a million times to get a nore accurate approximation of pi
+pi = 0
+d = 1
+
+for approx in range(1,1000000):# here i created the for loop called approx and gave it a start and stop range from 1 to 15000000
+    a = 2 * (approx % 2) - 1
+    pi += a * 4 / d
+    d += 2
+print(f"Appoximation of pi using loop:  {pi}") # here i printed out pi after its new value of pi that was added from the approx for loop
+print(f"True value of pi using math.pi: {math.pi}") # here is the actula value of pi useing the math module and pi statement
+
+
+
+
+
+
+#Problem 5:
+import math
+
+#Search the internet for how to convert radians to degrees.
+#Write a program to compute the conversion given a user input value.
+#Print this value as well as the calculated value using the degrees function in the math module.
+
+
+
+radians = float(input("Enter the number of radians: ")) # gets users input for radian
+
+degrees = radians * (180 / math.pi) # converts radians to degrees
+
+print(f"{radians} radians is equal to...............{degrees} degrees.") # my code
+print(f"radians to degrees using math.degrees {math.degrees(radians)} degrees.")  # math.degrees 
+
+
+
+
+#Problem 6:
+import math
+
+#Use a for statement to calculate the factorial of a user input value.
+#Print this value as well as the calculated value using the factorial function in
+#the math module.
+
+
+user = int(input("Please input a number to get its factoral value "))
+factorial = 1
+
+for form in range(1,user + 1): # this loop takes the users input and adds one for the range 
+    factorial = factorial * form # I then added the factorial variable I created above to store what value we are at when calculating each stage of the factorial
+print(factorial)
+print(form)
+print(math.factorial(user))
+
+
+
+
+
+
+
+
+
+  
